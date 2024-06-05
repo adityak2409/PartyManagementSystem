@@ -1,0 +1,114 @@
+
+      
+
+
+
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Veg Order Form</h1>
+    <form>
+      <!-- <div *ngFor="let item of filteredData"> -->
+
+      <!-- Centered Veg Dishes -->
+      <div class="text-center">
+        <div class="form-group">
+          <br>
+          <h2>Veg Dish:</h2>
+          <div class="veg-dishes">
+            <div class="row justify-content-center">
+              <!-- Veg Dishes Checkboxes -->
+              <div class="col-sm-auto" *ngFor="let veg of VegList">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="{{ veg.VegDish }}" name="vegDish" [(ngModel)]="veg.checked" [value]="veg.VegDish"(change)="onVegDishChange(veg)">
+                  <label class="form-check-label" for="{{ veg.VegDish }}">{{ veg.VegDish }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <!-- Select Bread -->
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <button type="button" (click)="toggleBreadSelection()" class="btn btn-secondary btn-block">
+              {{ formData.Bread ? 'Deselect Bread' : 'Select Bread' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <br>
+      <!-- Roti -->
+      <div class="form-group">
+        <h2>Roti:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let roti of RotiList">
+              <input class="form-check-input" type="checkbox" id="{{ roti }}" name="roti" [(ngModel)]="roti.checked" [value]="roti">
+              <label class="form-check-label" for="{{ roti }}">{{ roti }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <!-- Rice -->
+      <div class="form-group">
+        <h2>Rice:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let rice of RiceList">
+              <input class="form-check-input" type="checkbox" id="{{ rice }}" name="rice" [(ngModel)]="rice.checked" [value]="rice">
+              <label class="form-check-label" for="{{ rice }}">{{ rice }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <!-- Sweet -->
+      <div class="form-group">
+        <h2>Sweet:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let sweet of SweetList">
+              <input class="form-check-input" type="checkbox" id="{{ sweet }}" name="sweet" [(ngModel)]="sweet.checked" [value]="sweet">
+              <label class="form-check-label" for="{{ sweet }}">{{ sweet }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <button type="submit" (click)="OnSubmit()" class="btn btn-primary btn-block">Submit Order</button>
+          <!-- </div> -->
+        </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

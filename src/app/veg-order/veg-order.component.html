@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Veg Order Form</h2>
+  <form>
+    <div class="form-group">
+      <label for="vegDish">Veg Dish:</label>
+      <select id="vegDish" name="vegDish" [(ngModel)]="formData.VegDish" class="form-control">
+        <option *ngFor="let veg of VegList" [value]="veg.VegDish">{{ veg.VegDish }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group bread-group">
+      <button type="button" (click)="toggleBreadSelection()" class="btn btn-secondary">
+        {{ formData.Bread ? 'Deselect Bread' : 'Select Bread' }}
+      </button>
+    </div>
+    
+    <div class="form-group">
+      <label for="roti">Roti:</label>
+      <select id="roti" name="roti" [(ngModel)]="formData.Roti" class="form-control">
+        <option *ngFor="let roti of RotiList" [value]="roti">{{ roti }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="rice">Rice:</label>
+      <select id="rice" name="rice" [(ngModel)]="formData.Rice" class="form-control">
+        <option *ngFor="let rice of RiceList" [value]="rice">{{ rice }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="sweet">Sweet:</label>
+      <select id="sweet" name="sweet" [(ngModel)]="formData.Sweet" class="form-control">
+        <option *ngFor="let sweet of SweetList" [value]="sweet">{{ sweet }}</option>
+      </select>
+    </div>
+    
+    <button type="submit" (click)="OnSubmit()" class="btn btn-primary">Submit Order</button>
+  </form>
+</div>

@@ -1,0 +1,64 @@
+<div class="container mt-5">
+    <h2>Veg Order Form</h2>
+    <form>
+  
+      <!-- VegId -->
+      <!-- <div class="form-group row">
+        <label for="VegId" class="col-sm-2 col-form-label">Veg ID</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="VegId" [(ngModel)]="veg.VegId" name="VegId" placeholder="Enter Veg ID">
+        </div>
+      </div> -->
+  
+      <!-- VegDish -->
+      <div class="form-group row">
+        <label for="vegDish" class="col-sm-2 col-form-label">Veg Dish</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="vegDish" [(ngModel)]="veg.VegDish" name="vegDish" placeholder="Enter Veg Dish">
+        </div>
+      </div>
+  
+      <!-- Bread -->
+      <div class="form-group row">
+        <label for="Bread" class="col-sm-2 col-form-label">Bread</label>
+        <div class="col-sm-10">
+          <button type="button" (click)="toggleBreadSelection()" class="btn btn-secondary">
+            {{ veg.Bread ? 'Deselect Bread' : 'Select Bread' }}
+          </button>
+        </div>
+      </div>
+  
+      <!-- Roti -->
+      <div class="form-group row">
+        <label for="Roti" class="col-sm-2 col-form-label">Roti</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="roti" [(ngModel)]="veg.Roti" name="roti" placeholder="Enter Roti">
+        </div>
+      </div>
+  
+      <!-- Rice -->
+      <div class="form-group row">
+        <label for="Rice" class="col-sm-2 col-form-label">Rice</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="rice" [(ngModel)]="veg.Rice" name="rice" placeholder="Enter Rice">
+        </div>
+      </div>
+  
+      <!-- Sweet -->
+      <div class="form-group row">
+        <label for="Sweet" class="col-sm-2 col-form-label">Sweet</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="sweet" [(ngModel)]="veg.Sweet" name="sweet" placeholder="Enter Sweet">
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" (click)="OnSubmit()" class="btn btn-primary">Submit Order</button>
+        </div>
+      </div>
+  
+    </form>
+  </div>
+  

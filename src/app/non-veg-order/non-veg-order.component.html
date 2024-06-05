@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Non-Veg Order Form</h2>
+    <form>
+      <div class="form-group">
+        <label for="nonVegDish">Non-Veg Dishes:</label>
+        <select id="nonVegDish" name="nonVegDish" [(ngModel)]="formData.NonVegDish" class="form-control">
+          <option *ngFor="let dish of NonVegList" [value]="dish.NonVegDish">{{ dish.NonVegDish }}</option>
+        </select>
+      </div>
+
+
+         
+      
+      <div class="form-group">
+        <label for="chicken">Chicken:</label>
+        <select id="chicken" name="chicken" [(ngModel)]="formData.Chicken" class="form-control">
+          <option *ngFor="let chicken of ChickenList" [value]="chicken">{{ chicken }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="fish">Fish:</label>
+        <select id="fish" name="fish" [(ngModel)]="formData.Fish" class="form-control">
+          <option *ngFor="let fish of FishList" [value]="fish">{{ fish }}</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="chinese">Chinese:</label>
+        <select id="chinese" name="chinese" [(ngModel)]="formData.Chinese" class="form-control">
+          <option *ngFor="let chinese of ChineseList" [value]="chinese">{{ chinese }}</option>
+        </select>
+      </div>
+      
+    
+  
+       <!-- Select Roti -->
+       <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <button type="button" (click)="toggleBreadSelection()" class="btn btn-secondary btn-block">
+              {{ formData.Roti ? 'Deselect Roti' : 'Select Roti' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <button type="submit" (click)="OnSubmit()" class="btn btn-primary">Submit Order</button>
+    </form>
+  </div>
+  

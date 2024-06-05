@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-veg {
+    background-color: green;
+    color: white;
+  }
+  
+  .btn-non-veg {
+    background-color: red;
+    color: white;
+  }
+  
+  .selection {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  

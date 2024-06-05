@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <h2>Non-Veg Order Form</h2>
+    <form>
+  
+      <!-- NonVegId -->
+      <!-- <div class="form-group row">
+        <label for="NonVegId" class="col-sm-2 col-form-label">Non-Veg ID</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="NonVegId" [(ngModel)]="nonVeg.NonVegId" name="NonVegId" placeholder="Enter Non-Veg ID">
+        </div>
+      </div> -->
+  
+      <!-- NonVegDishes -->
+      <div class="form-group row">
+        <label for="NonVegDish" class="col-sm-2 col-form-label">Non-Veg Dish</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="NonVegDish" [(ngModel)]="nonVeg.NonVegDish" name="NonVegDish" placeholder="Enter Non-Veg Dish">
+        </div>
+      </div>
+  
+      <!-- Roti -->
+      <div class="form-group row">
+        <label for="Roti" class="col-sm-2 col-form-label">Roti</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="roti" [(ngModel)]="nonVeg.Roti" name="roti" placeholder="Enter Roti">
+        </div>
+      </div>
+  
+      <!-- Chicken -->
+      <div class="form-group row">
+        <label for="Chicken" class="col-sm-2 col-form-label">Chicken</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="chicken" [(ngModel)]="nonVeg.Chicken" name="chicken" placeholder="Enter Chicken Dish">
+        </div>
+      </div>
+  
+      <!-- Fish -->
+      <div class="form-group row">
+        <label for="Fish" class="col-sm-2 col-form-label">Fish</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="fish" [(ngModel)]="nonVeg.Fish" name="fish" placeholder="Enter Fish Dish">
+        </div>
+      </div>
+  
+      <!-- Chinese -->
+      <div class="form-group row">
+        <label for="Chinese" class="col-sm-2 col-form-label">Chinese</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="chinese" [(ngModel)]="nonVeg.Chinese" name="chinese" placeholder="Enter Chinese Dish">
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2">
+          <button type="submit" (click)="OnSubmit()" class="btn btn-primary">Submit Order</button>
+        </div>
+      </div>
+  
+    </form>
+</div>

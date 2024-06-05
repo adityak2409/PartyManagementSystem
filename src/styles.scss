@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .login-form, .party-management-form, .party-list {
+    margin-bottom: 2rem;
+  }
+  
+  form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  form .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+  }
+  
+  @media (max-width: 600px) {
+    table th, table td {
+      display: block;
+      width: 100%;
+    }
+  }
+  

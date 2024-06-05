@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Non-Veg Order Form</h1>
+    <form>
+      <!-- Centered NonVeg Dishes -->
+      <div class="text-center">
+        <div class="form-group">
+          <br>
+          <h2>Non-Veg Dish:</h2>
+          <div class="nonveg-dishes">
+            <div class="row justify-content-center">
+              <!-- NonVeg Dishes Checkboxes -->
+              <div class="col-sm-auto" *ngFor="let nonveg of NonVegList">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="{{ nonveg.NonVegDish }}" name="nonvegDish" [(ngModel)]="nonveg.checked" [value]="nonveg.NonVegDish">
+                  <label class="form-check-label" for="{{ nonveg.NonVegDish }}">{{ nonveg.NonVegDish }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <!-- Roti  -->
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <button type="button" (click)="toggleRotiSelection()" class="btn btn-secondary btn-block">
+              {{ formData.Roti ? 'Deselect Roti' : 'Select Roti' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <!-- Chicken -->
+      <div class="form-group">
+        <h2>Chicken:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let chicken of ChickenList">
+              <input class="form-check-input" type="checkbox" id="{{ chicken }}" name="chicken" [(ngModel)]="chicken.checked" [value]="chicken">
+              <label class="form-check-label" for="{{ chicken }}">{{ chicken }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Fish -->
+      <div class="form-group">
+        <h2>Fish:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let fish of FishList">
+              <input class="form-check-input" type="checkbox" id="{{ fish }}" name="fish" [(ngModel)]="fish.checked" [value]="fish">
+              <label class="form-check-label" for="{{ fish }}">{{ fish }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Chinese -->
+      <div class="form-group">
+        <h2>Chinese:</h2>
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <div class="form-check" *ngFor="let chinese of ChineseList">
+              <input class="form-check-input" type="checkbox" id="{{ chinese }}" name="chinese" [(ngModel)]="chinese.checked" [value]="chinese">
+              <label class="form-check-label" for="{{ chinese }}">{{ chinese }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <br>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <button type="submit" (click)="OnSubmit()" class="btn btn-primary btn-block">Submit Order</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

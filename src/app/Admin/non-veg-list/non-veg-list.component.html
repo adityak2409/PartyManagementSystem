@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="table-responsive">
+      <button (click)="exportToExcel()" class="btn btn-success mb-2">Export to Excel</button>
+
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>NonVegId</th>
+            <th>NonVegDish</th>
+            <th>Chicken</th>
+            <th>Fish</th>
+            <th>Chinese</th>
+            <th>Roti</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let nonVeg of NonVegList">
+            <td>{{ nonVeg.NonVegId }}</td>
+            <td>{{ nonVeg.NonVegDish }}</td>
+            <td>{{ nonVeg.Chicken }}</td>
+            <td>{{ nonVeg.Fish }}</td>
+            <td>{{ nonVeg.Chinese }}</td>
+            <td>{{ nonVeg.Roti }}</td>
+            <td>
+              <i class="fa fa-pencil-square iconaction" (click)="Edit(nonVeg.NonVegId)" aria-hidden="true"></i>
+              &nbsp;
+              <i class="fa fa-eye iconaction" (click)="View(nonVeg.NonVegId)" aria-hidden="true"></i>
+              &nbsp;
+              <i class="fa fa-trash iconaction" (click)="Delete(nonVeg.NonVegId)" aria-hidden="true"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
